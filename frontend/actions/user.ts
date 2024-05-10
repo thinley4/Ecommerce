@@ -96,7 +96,7 @@ export async function deleteOrder(id: string) {
 }
 
 export async function displayOrders() {
-  const data = await axios("http://127.0.0.1:8888/orders/all?limit=30");
+  const data = await axios.get("http://127.0.0.1:8888/orders/all?limit=30");
   const dataArray = data.data;
 
   return dataArray;
