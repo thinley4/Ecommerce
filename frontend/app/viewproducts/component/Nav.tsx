@@ -1,12 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link'
+import Logo from '@/app/viewproducts/component/assets/Logo.png'
 
 function Nav() {
     return (
-        <div className="sticky top-0 z-50 text-xl font-bold text-[#B6EADA] bg-[#301E67]">
-            <div className="flex justify-center items-center h-16 p-2">
-                <a href="" className="relative text-4xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                    Ecommerce
-                </a>
+        <div className=" bg-white">
+            <div className="flex justify-start items-center h-14 p-2 ">
+                <Image src={Logo} alt='logo' className='w-36 cursor-pointer' />
             </div>
         </div>
     )

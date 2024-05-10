@@ -12,7 +12,7 @@ export default function Page() {
     return (
         <div className="bg-slate-200 flex justify-center items-center h-screen">
             <div className="border bg-white p-5 rounded-lg">
-                <div className="flex justify-center py-5 font-bold text-xl">Create Product</div>
+                <div className="flex justify-center py-5 font-bold text-xl">Add Product</div>
                 <input onChange={(e)=> {
                             setName(e.target.value)
                 }} type="text" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Priduct Name" required />

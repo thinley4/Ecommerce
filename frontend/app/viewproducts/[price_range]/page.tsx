@@ -3,7 +3,6 @@ import Button from "../component/DeleteButton";
 import Link from "next/link";
 import OrderButton from "../component/OrderButton";
 import { CarouselShadcn } from "../component/CarouselShadcn";
-import currentImage from "../component/Images";
 import Price_range from "../component/PriceRageInput";
 import Image from "next/image";
 import product from "../component/assets/product.jpg";
@@ -49,15 +48,15 @@ function Product(props: any) {
         <Image src={product} alt="image" className="h-72 object-cover" />
       </div>
       <div>
-        <div className="flex">
+        <div className="flex pt-2">
           <div className="mr-2">Name:</div>
           <div className="capitalize">{props.data.name}</div>
         </div>
-        <div className="flex">
+        <div className="flex pt-2">
           <div className="mr-2">Price:</div>
           {props.data.price}
         </div>
-        <div className="flex">
+        <div className="flex py-2">
           <div className="mr-2">Quantity</div>
           {props.data.quantity}
         </div>

@@ -33,7 +33,7 @@ export default function Hero() {
         </motion.div>
       </AuroraBackground>
       <div className="lg:flex items-center justify-around bg-neutral-100">
-        <div className="text-7xl md:flex justify-center ">Free Delivery Till 7th ✨</div>
+        <div className="text-5xl md:text-6xl lg:text-7xl md:flex justify-center ">Free Delivery Till 7th ✨</div>
         <Featurescard
           title="Flash Delivery"
           description="Get yours Now"
@@ -41,16 +41,16 @@ export default function Hero() {
         />
       </div>
       <div className="lg:flex items-center justify-around bg-neutral-300">
-        <div className="text-7xl md:flex justify-center lg:hidden">Trust And Relation ✨</div>
+        <div className="text-5xl md:text-6xl lg:text-7xl md:flex justify-center lg:hidden">Trust And Relation ✨</div>
         <Featurescard
           title="Flash Delivery"
           description="Get yours Now"
           image={Trust}
         />
-        <div className="hidden md:hidden text-7xl lg:block">Trust And Relation ✨</div>
+        <div className="hidden md:hidden text-5xl md:text-6xl lg:text-7xl lg:block">Trust And Relation ✨</div>
       </div>
       <div className="lg:flex items-center justify-around bg-neutral-200">
-        <div className="text-7xl md:flex justify-center">Growing Ecommerce ✨</div>
+        <div className="text-5xl md:text-6xl lg:text-7xl md:flex justify-center">Growing Ecommerce ✨</div>
         <Featurescard
           title="Flash Delivery"
           description="Get yours Now"
