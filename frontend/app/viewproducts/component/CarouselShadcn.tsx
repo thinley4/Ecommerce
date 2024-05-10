@@ -1,6 +1,7 @@
 'use client'
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
+import Image from "next/image"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -11,7 +12,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-import img1 from '@/public/img1.jpg'
+import one from './assets/one.jpg'
+import two from './assets/two.jpg'
+import three from './assets/three.png'
+import four from './assets/four.jpg'
+import five from './assets/five.jpg'
 
 
 export function CarouselShadcn() {
@@ -21,19 +26,19 @@ export function CarouselShadcn() {
 
   const arr = [
     {
-      url: 'https://images-eu.ssl-images-amazon.com/images/G/31/OHL/24/BAU/feb/PC_hero_1_2x_1._CB582889946_.jpg'
+      url: four
     },
     {
-      url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg'
+      url: five
     },
     {
-      url: 'https://images-eu.ssl-images-amazon.com/images/G/31/OHL/24/BAU/feb/PC_hero_1_2x_1._CB582889946_.jpg'
+      url: three
     },
     {
-      url: 'https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg'
+      url: one
     },
     {
-      url: 'https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/ubs_pc_unrec._CB558367776_.png'
+      url: two
     }
   ]
 
@@ -50,7 +55,7 @@ export function CarouselShadcn() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center">
-                  <img src={a.url} alt="img" />
+                  <Image src={a.url} alt="img" />
                 </CardContent>
               </Card>
             </div>

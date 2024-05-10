@@ -1,5 +1,7 @@
 import { displayOrders, getSingleProduct } from "@/actions/user";
 import DeleteOrderButton from "../viewproducts/component/DeleteOrderButton";
+import Image from "next/image";
+import order from '../components/assets/order.jpg'
 
 export default async function Landing() {
   const dataArray = await displayOrders();
@@ -24,11 +26,7 @@ function Product(props: any) {
       className="py-2 mt-2 flex rounded-sm transform bg-white shadow-lg transition duration-300 hover:scale-95"
     >
       <div>
-        <img
-          className="h-32 w-28"
-          src="https://m.media-amazon.com/images/I/51UNWtvV4nL._AC_AA270_.jpg"
-          alt="image"
-        />
+        <Image src={order} alt="image" className="h-32 w-28 object-cover" />
       </div>
       <div className="w-screen pl-9">
         <div>
