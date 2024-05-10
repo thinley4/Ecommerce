@@ -68,6 +68,7 @@ export async function displayProducts(rangestring: string) {
       const dataArray = data.data.data;
       return dataArray;
   }catch(e) {
+    return []
     return "Not displayed"
   }
 }
@@ -128,6 +129,7 @@ export async function displayOrders() {
   
     return dataArray;
   }catch(e) {
+    return [];
     return "No order displayed"
   }
 }
