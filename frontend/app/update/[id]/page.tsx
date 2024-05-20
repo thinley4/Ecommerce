@@ -10,8 +10,8 @@ export default function Page({ params }: {params: any}) {
     const [price, setPrice]= useState(0 || "");
     const [quantity, setQuantity] = useState(0 || "");
     return (
-        <div className="bg-slate-200 flex justify-center items-center h-screen">
-            <div className="border bg-white p-5 rounded-lg">
+        <div className="bg-slate-200 dark:bg-black flex justify-center items-center h-screen">
+            <div className="border bg-white dark:bg-blue-950 p-5 rounded-lg">
                 <div className="flex justify-center py-5 font-bold text-xl">Update Product</div>
                 <input onChange={(e)=> {
                             setName(e.target.value)

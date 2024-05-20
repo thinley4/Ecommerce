@@ -9,7 +9,7 @@ export default async function Landing() {
   // const getProductId = await getSingleProduct()
 
   return (
-    <div className="bg-[#6244bb] w-full py-5 flex justify-center min-h-screen">
+    <div className="bg-[#6244bb] dark:bg-black w-full py-5 flex justify-center min-h-screen">
       <div className="h-full text-[#03001C] font-medium">
         {dataArray.map((d: any, index: any) => (
           <Product data={d} key={index} />
@@ -23,7 +23,7 @@ function Product(props: any) {
   return (
     <div
       key={props.index}
-      className="py-2 mt-2 flex rounded-sm transform bg-white shadow-lg transition duration-300 hover:scale-95"
+      className="py-2 mt-2 flex rounded-sm transform bg-white dark:bg-blue-950 dark:text-white shadow-lg transition duration-300 hover:scale-95"
     >
       <div>
         <Image src={order} alt="image" className="h-32 w-28 object-cover" />

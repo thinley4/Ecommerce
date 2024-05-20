@@ -44,12 +44,12 @@ function Product(props: any) {
   return (
     <div
       key={props.index}
-      className="p-3 rounded-sm transform w-fit lg:w-[20rem] 2xl:w-fit md:w-[22rem] sm:w-[18rem] bg-[#B6EADA] shadow-xl transition duration-300 hover:scale-105"
+      className="p-3 rounded-sm transform w-fit lg:w-[20rem] 2xl:w-fit md:w-[22rem] sm:w-[18rem] bg-[#B6EADA] dark:bg-blue-950 shadow-xl transition duration-300 hover:scale-105"
     >
       <div>
         <Image src={product} alt="image" className="h-72 object-cover" />
       </div>
-      <div>
+      <div className="dark:text-white">
         <div className="flex pt-2">
           <div className="mr-2">Name:</div>
           <div className="capitalize">{props.data.name}</div>

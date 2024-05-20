@@ -18,17 +18,19 @@ function Price_range() {
         }}
       >
         <Input
+          className="dark:bg-white"
           onChange={(e) => {
             setPriceRange((prev) => [parseInt(e.target.value), prev[1]]);
           }}
         ></Input>
         <Input
+          className="dark:bg-white"
           onChange={(e) => {
             setPriceRange((prev) => [prev[0], parseInt(e.target.value)]);
           }}
         ></Input>
         <Input type="submit" className="hidden" />
-        <Button type="submit">Apply</Button>
+        <Button className="dark:bg-blue-950 dark:text-white" type="submit">Apply</Button>
       </form>
     </div>
   );
