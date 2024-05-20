@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 
 export async function deleteProduct(id: string) {
   try{
-      const res = await axios.delete(`https://fastapi-ecommerce-api.onrender.com/products/${id}`);
+      const res = await axios.delete(`http://127.0.0.1:8888/products/${id}`);
       revalidatePath("/");
       return "Deleted";
   } catch(e) {
@@ -17,7 +17,7 @@ export async function updateQuantity(id: string) {}
 
 export async function create(name: string, price: any, quantity: any) {
   try {
-    const response = await axios.post("https://fastapi-ecommerce-api.onrender.com/products/create", {
+    const response = await axios.post("http://127.0.0.1:8888/products/create", {
       name,
       price,
       quantity,
@@ -31,7 +31,7 @@ export async function create(name: string, price: any, quantity: any) {
 
 export async function update(name: string, price: any, quantity: any, id: any) {
   try {
-    const response = await axios.put(`https://fastapi-ecommerce-api.onrender.com/products/${id}`, {
+    const response = await axios.put(`http://127.0.0.1:8888/products/${id}`, {
       name,
       price,
       quantity,
@@ -58,13 +58,13 @@ export async function displayProducts(rangestring: string) {
               }
             ];
           };
-        } = await axios.get("https://fastapi-ecommerce-api.onrender.com/products/all");
+        } = await axios.get("http://127.0.0.1:8888/products/all");
         const dataArray = data.data.data.filter(
           (d) => d.price >= parseInt(range[0]) && d.price <= parseInt(range[1])
         );
         return dataArray;
       }
-      const data = await axios.get("https://fastapi-ecommerce-api.onrender.com/products/all?limit=100");
+      const data = await axios.get("http://127.0.0.1:8888/products/all?limit=100");
       const dataArray = data.data.data;
       return dataArray;
   }catch(e) {
@@ -81,7 +81,7 @@ export async function getSingleProduct(id: string) {
         name: string;
         price: number;
         quantity: number;
-      } = await axios.get(`https://fastapi-ecommerce-api.onrender.com/products/${id}`);
+      } = await axios.get(`http://127.0.0.1:8888/products/${id}`);
       return data;
   }catch(e) {
     return "No single product"
@@ -92,7 +92,7 @@ export async function getSingleProduct(id: string) {
 
 export async function createOrder(id: string, quantity: any, name: string) {
   try {
-      const response = await axios.post("https://fastapi-ecommerce-api.onrender.com/orders/create", {
+      const response = await axios.post("http://127.0.0.1:8888/orders/create", {
         items: [
           {
             productId: id,
@@ -115,7 +115,7 @@ export async function createOrder(id: string, quantity: any, name: string) {
 
 export async function deleteOrder(id: string) {
   try {
-      const res = await axios.delete(`https://fastapi-ecommerce-api.onrender.com/orders/${id}`);
+      const res = await axios.delete(`http://127.0.0.1:8888/orders/${id}`);
       revalidatePath("/order");
       return "Deleted order item";
   }catch(e) {
@@ -125,7 +125,7 @@ export async function deleteOrder(id: string) {
 
 export async function displayOrders() {
   try {
-    const data = await axios.get("https://fastapi-ecommerce-api.onrender.com/orders/all?limit=100");
+    const data = await axios.get("http://127.0.0.1:8888/orders/all?limit=100");
     const dataArray = data.data;
   
     return dataArray;
